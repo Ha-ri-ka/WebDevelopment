@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CART REPLICA</title>
+</head>
+<body>
+    <p>Your Cart</p>
+    <p>
+        <button onclick="console.log('cart contains '+cartQuantity+ ' items')">
+          Show Quantity
+        </button>
+
+        <button onclick="cartQuantity+=1; console.log('Item added. Cart contains '+cartQuantity+' items.')">
+          Add to cart
+        </button>
+
+        <button onclick="cartQuantity+=2; console.log('2 items added. Cart contains '+cartQuantity+' items.')">
+          +2
+        </button>
+
+        <button onclick="cartQuantity+=3; console.log('3 items added. Cart contains '+cartQuantity+' items.')">
+          +3
+        </button>
+
+        <button onclick="cartQuantity=0; console.log('Cart cleared. Cart contains '+cartQuantity+' items.')">
+          Reset cart
+        </button>
+    </p>
+  <script>
+    let cartQuantity=0
+  </script>
+</body>
+</html>
