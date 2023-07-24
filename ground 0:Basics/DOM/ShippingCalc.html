@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Amazon shipping calculator</title>
+  <style>   </style>
+</head>
+<body>
+    Amazon Shipping calculator
+
+    <p>Orders under ₹250 = +₹25 rupees shipping</p>
+
+    <p>Orders over ₹250 = FREE shipping</p>
+
+    <input placeholder="Cost of order" class="js-cost-input" onkeydown="
+    if (event.key==='Enter') calculateCost()">
+    
+    <button class="js-calcButton" onclick='calculateCost()'>Calculate</button>
+    
+    <p class="js-finalCost"></p>
+    
+    <script> 
+    function calculateCost()
+    {
+        amount=document.querySelector('.js-cost-input');
+        if (amount.value<=250)
+        document.querySelector('.js-finalCost').innerText=`Your total is ₹${Number(amount.value)+25}`
+        else
+        document.querySelector('.js-finalCost').innerHTML=`Your total is ₹${Number(amount.value)}`
+    }
+     </script>
+</body>
+</html>
