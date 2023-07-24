@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM projects</title>
+  <style>
+    body {
+        font-family: Arial;
+        font-size: 20px;
+    }
+
+    .sub-button {
+        background-color: red;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-bottom: 30px;
+        border: none;
+        font-size: 20px;
+    }
+    .is-Subbed{
+        background-color: rgb(196, 189, 189);
+        color:black;
+        border: none;        
+    }
+
+    .cost-input{
+        font-size: 20px;
+        padding: 10px;
+        border: none;
+    }
+
+    .calcButton{
+        background-color: green;
+        font-size: 20px;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    <p>YouTube Subscribe Button</p>
+    <p></p>
+    <button class="sub-button" onclick="changeSubButton()">
+    Subscribe</button>
+
+    <p>Amazon Shipping calculator</p>
+    <p>Orders under ₹250 = +₹25 rupees shipping</p>
+
+    <p>Orders over ₹250 = FREE shipping</p>
+
+    <input placeholder="Cost of order" class="js-cost-input cost-input" onkeydown="
+    if (event.key==='Enter') calculateCost()">
+    
+    <button class="calcButton" onclick='calculateCost()'>Calculate</button>
+    
+    <p class="js-finalCost"></p>
+  <script>
+    function changeSubButton()
+    {
+        const buttonElement=document.querySelector('.sub-button');
+        if (buttonElement.innerText==='Subscribe')
+        {
+            buttonElement.innerText='Subscribed';
+            buttonElement.classList.add('is-Subbed');
+        }
+        else 
+        {
+            buttonElement.innerText='Subscribe';
+            buttonElement.classList.remove('is-Subbed');
+        }
+    }
+
+    function calculateCost()
+    {
+        amount=document.querySelector('.js-cost-input');
+        if (amount.value<=250)
+        document.querySelector('.js-finalCost').innerText=`Your total is ₹${Number(amount.value)+25}`
+        else
+        document.querySelector('.js-finalCost').innerHTML=`Your total is ₹${Number(amount.value)}`
+    }
+  </script>
+</body>
+</html>
