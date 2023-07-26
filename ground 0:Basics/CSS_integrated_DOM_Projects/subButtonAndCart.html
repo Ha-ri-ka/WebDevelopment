@@ -38,6 +38,9 @@
         border: none;
         cursor: pointer;
     }
+    .message{
+        color: red;
+    }
   </style>
 </head>
 <body>
@@ -57,6 +60,7 @@
     <button class="calcButton" onclick='calculateCost()'>Calculate</button>
     
     <p class="js-finalCost"></p>
+    <p class="message"></p>
   <script>
     function changeSubButton()
     {
@@ -76,10 +80,33 @@
     function calculateCost()
     {
         amount=document.querySelector('.js-cost-input');
-        if (amount.value<=250)
-        document.querySelector('.js-finalCost').innerText=`Your total is ₹${Number(amount.value)+25}`
+        msg=document.querySelector('.message');
+        if(amount.value<0)
+        {
+            document.querySelector('.js-finalCost').innerText="";
+            msg.innerHTML='Error: cost cannot be less than ₹0'
+        }
+        else if (amount.value=="")
+        {
+            msg.innerHTML='';
+            document.querySelector('.js-finalCost').innerText="";
+        }
+        else if (amount.value<=250 && amount.value!="")
+        {
+            msg.innerHTML='';
+            document.querySelector('.js-finalCost').innerText=`Your total is ₹${Number(amount.value)+25}`
+        }
+        else if(amount.value>250 && amount.value!="")
+        {
+            msg.innerHTML='';
+            document.querySelector('.js-finalCost').innerHTML=`Your total is ₹${Number(amount.value)}`
+        }
         else
-        document.querySelector('.js-finalCost').innerHTML=`Your total is ₹${Number(amount.value)}`
+        {
+            msg.innerHTML='enter a valid amount.';
+            document.querySelector('.js-finalCost').innerText="";
+        }
+
     }
   </script>
 </body>
