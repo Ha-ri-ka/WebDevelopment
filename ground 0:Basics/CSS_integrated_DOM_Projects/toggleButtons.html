@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>toggle buttons</title>
+  <style>
+  .gaming{
+    font-size: 20px;
+    padding: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    cursor: pointer;
+    background-color: gray;
+    margin-right: 15px;
+  }
+  .music{
+    font-size: 20px;
+    padding: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    cursor: pointer;
+    background-color: gray;
+    margin-right: 15px;
+  }
+  .tech{
+    font-size: 20px;
+    padding: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    cursor: pointer;
+    background-color: gray;
+    margin-right: 15px;
+  }
+  .is-toggled{
+    background-color: rgb(38, 150, 4);
+  }   
+  .message{
+    font-size: 25px;
+  }
+</style>
+</head>
+<body>
+    <p></p>
+    <button class="gaming" onclick="toggleElement(document.querySelector('.gaming'),'Gaming')">Gaming</button>
+    <button class="music" onclick="toggleElement(document.querySelector('.music'),'Music')">Music</button>
+    <button class="tech" onclick="toggleElement(document.querySelector('.tech'),'Tech')">Tech</button>
+    <p class="message"></p>
+  <script>
+  function toggleElement(buttonElement,name)
+  {
+    
+    const gameButton=document.querySelector('.gaming').classList.contains('is-toggled');
+    const musicButton=document.querySelector('.music').classList.contains('is-toggled');
+    const techButton=document.querySelector('.tech').classList.contains('is-toggled');
+    msg=document.querySelector('.message');
+    if (buttonElement.classList.contains('is-toggled')==false)
+    {
+        if( gameButton || musicButton || techButton)
+        {
+            msg.innerHTML='Cannot turn on more than one button at once.'
+        }
+        else
+        {
+            buttonElement.classList.add('is-toggled');
+            buttonElement.innerHTML=`${name}:ON`;
+            msg.innerHTML='';
+        }
+    }
+    else
+    {
+        msg.innerHTML='';
+        buttonElement.innerHTML=`${name}`;
+        buttonElement.classList.remove('is-toggled');
+    }
+  }  
+</script>
+</body>
+</html>
