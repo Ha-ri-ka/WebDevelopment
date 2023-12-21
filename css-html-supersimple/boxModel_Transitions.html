@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Box model buttons and transitions</title>
+  <style>   
+    .title{
+        font-size: 25px;
+    }
+    .nav{
+        background-color: rgb(193, 189, 189);
+        color: black;
+        border: 1.3px;
+        border-color: black;
+        padding: 10px;
+        border-style: solid;
+        border-radius: 3px;
+        margin-right: 5px;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+    .nav:hover{
+        background-color: rgb(184,180, 180);
+    }
+    .nav:active{
+        background-color:rgb(176,172, 172);
+    }
+    .link{
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .link:hover{
+        color:rgb(228, 90, 143);
+    }
+    .basic{
+        background-color: green;
+        color: white;
+        border: none;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-left: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+    .stretch{
+        transition: padding-left 0.6s,padding-right 0.6s,padding-top 0.6s,padding-bottom 0.6s;
+    }
+    .stretch:hover{
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .shadow{
+        box-shadow: 3px 3px 5px rgba(0, 0, 0,0.5);
+        transition: 0.3s;
+    }
+    .shadow:active{
+        margin-left: 23px;
+        margin-top: 3px;
+        box-shadow: none;
+    }
+    .horiz{
+        transition: 0.3s;
+    }
+    .horiz:hover{
+        padding-left: 26px;
+        padding-right: 26px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+    <p class="title">Pagination</p>
+    <p>Links to my repositories</p>
+    <button class="nav">Back</button>
+    <a class="link" href="https://github.com/Ha-ri-ka/MIT-labs-ai-ml" target="_blank">1</a>
+    <a class="link" href="https://github.com/Ha-ri-ka/Python" target="_blank">2</a>
+    <a class="link" href="https://github.com/Ha-ri-ka/DSA-Practice" target="_blank">3</a>
+    <a class="link" href="https://github.com/Ha-ri-ka/WebDevelopment" target="_blank">4</a>
+    <button class="nav">Next</button>
+
+    <p class="title">Stretch</p>
+    <button class="stretch basic">Stretch</button>
+
+    <p class="title ">3D CLICK</p>
+    <button class="shadow basic">Click</button>
+
+    <p class="title">horizontal stretch</p>
+    <button class="basic horiz">One</button>
+    <button class="basic horiz">Two</button>
+    <button class="basic horiz">Three</button>
+</body>
+</html>
