@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Twitter textbox</title>
+  <style>
+    .pfp{
+        width:50px;
+        height: 50px;
+        border-radius: 25px;
+        vertical-align: middle;
+        margin-right: 5px;
+    }   
+    .input{
+        vertical-align: middle;
+        font-size: 15px;
+        border: none;
+        height: 25px;
+        width: 300px;
+        border-color: transparent;
+    }
+    .twt-button{
+        vertical-align: middle;
+            background-color: rgb(29,155,240);
+            padding: 7px;
+            padding-right: 20px;
+            padding-left: 20px;
+            border-radius: 20px;
+            border: none;
+            font-weight: bolder;
+            font-size:15px;
+            cursor: pointer;
+            color: white;
+            transition: box-shadow 0.15s;
+        }
+    .twt-button:hover{
+            box-shadow: 5px 5px 10px rgba(0, 0, 0,0.15);
+        }
+  </style>
+</head>
+<body>
+    <img src="pfp.jpg" class="pfp">
+    <input class="input" placeholder="  What's happening?">
+    <button class="twt-button">Tweet</button>
+</body>
+</html>
