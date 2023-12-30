@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Van Gogh Gallery</title>
+  <style>
+    a,p{
+        margin-top: 0px;
+        font-size: 20px;
+        font-family: Georgia;
+        margin-bottom: 10px;
+        text-align: center;
+        display: block;
+    }
+    a{
+        font-size: 15px;
+        color:darkslateblue
+    }
+    .title{
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+    .image{
+        width: 100%;
+        height: 300px; 
+        margin-bottom: 20px;
+        border-color: black;
+        border-style: dashed;
+        border-width: 3px;
+        border-radius: 3px;
+        transition: 0.3s, border 0.1s;
+    }
+    .image:hover{
+        width: 110%;
+        height: 330px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        border: none;
+    }
+    .row-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 50px;
+        row-gap: 30px;
+    }
+  </style>
+</head>
+<body>
+    <p class="title">Van Gogh and his works</p>
+    <div class="row-grid">
+
+        <div class="art-work">
+            <img src="images/1.jpg" class="image">
+            <p><i>Head of a Skeleton with a Burning Cigarette</i></p>
+            <a href="https://www.vangoghmuseum.nl/en/collection/s0083V1962" target="_blank">About the piece</a>
+        </div>
+    
+        <div class="art-work">
+            <img src="images/2.jpg" class="image">
+            <p><i>Wheatfield under Thunderclouds</i></p>
+            <a href="https://www.vangoghmuseum.nl/en/collection/s0106V1962" target="_blank">About the piece</a>
+        </div>
+    
+        <div class="art-work">
+            <img src="images/3.jpg" class="image">
+            <p><i>Almond Blossom</i></p>
+            <a href="https://www.vangoghmuseum.nl/en/collection/s0176V1962" target="_blank">About the piece</a>
+        </div>
+    
+        <div class="art-work">
+            <img src="images/4.jpg" class="image">
+            <p><i>Irises</i></p>
+            <a href="https://www.vangoghmuseum.nl/en/collection/s0050V1962" target="_blank">About the piece</a>
+        </div>
+    
+        <div class="art-work">
+            <img src="images/5.jpg" class="image">
+            <p><i>Self-Portrait with Grey Felt Hat</i></p>
+            <a href="https://www.vangoghmuseum.nl/en/collection/s0016V1962" target="_blank">About the piece</a>
+        </div>
+    
+        <div class="art-work">
+            <img src="images/6.jpg" class="image">
+            <p><i>Farmhouse in a Wheatfield</i></p>
+            <a href="https://www.vangoghmuseum.nl/en/collection/s0034V1962" target="_blank">About the piece</a>
+        </div>
+    
+        <div class="art-work">
+            <img src="images/7.jpg" class="image">
+            <p><i>View of Paris</i></p>
+            <a href="https://www.vangoghmuseum.nl/en/collection/s0013V1962" target="_blank">About the piece</a>
+        </div>
+    
+        <div class="art-work">
+            <img src="images/8.jpg" class="image">
+            <p><i>Basket of Hyacinth Bulbs</i></p>
+            <a href="https://www.vangoghmuseum.nl/en/collection/s0063V1962" target="_blank">About the piece</a>
+        </div>
+    </div>
+</body>
+</html>
