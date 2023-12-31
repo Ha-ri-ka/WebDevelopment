@@ -3,34 +3,56 @@
 <head>
   <title>Tweet</title>
   <style> 
+    .container{
+        display: flex;
+        
+    }
     .pfp{
         width: 50px;
         height: 50px;
         border-radius: 25px;
     }
-    .tweet-top{
+    .picture-div{
         display: flex;
-        align-items: top;
+   }
+    .tweet-content{
+        display: flex;
+    }
+    .tweet-text{
+        margin-top: 5px;
+        width: 300px;
+        line-height: 20px;
     }
    </style>
 </head>
 <body>
+    <!-- container -->
     <div class="container">
-        <!-- vertical top div -->
-        <div class="tweet-top">
-            <!-- horizontal left div -->
-            <div class="picture-div">
-                <img src="pfp.jpg" class="pfp">
-            </div>
-            <!-- horizontal right div -->
+        <!-- horizontal left div -->
+        <div class="picture-div">
+            <img src="pfp.jpg" class="pfp">
+        </div>
+        <!-- horizontal right div -->
+        <div>
+            <!-- vertical top div -->
             <div>
                 supersimple.dev @SuperSimpleDev
+                <p class="tweet-text">
+                    What is backend development? A complete overview. New video is up!
+                </p>
+            </div>
+            <!-- vertical bottom div -->
+            <div>
+                <!-- horizontal left div -->
+                <div class="gray-area">
+
+                </div>
+                <div>
+                    
+                </div>
             </div>
         </div>
-        <div>
-            What is backend web development? A complete overview. New video is up!
-        </div>
-    </div>
 
+    </div>
 </body>
 </html>
